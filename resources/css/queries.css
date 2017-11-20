@@ -1,0 +1,53 @@
+/*-----------------------------------------*/
+/*-----Screen sizes 767px and smaller------*/
+/*-----------------------------------------*/
+
+/*---Font-Size---*/
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+
+/*---Navbar background---*/
+    .navbar-collapse {
+        background-color: #30333C; 
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited,{
+        border: 0;
+    }
+    .main-nav li a:hover,    
+    .main-nav li a:active,
+    .sticky .main-nav li a:hover,    
+    .sticky .main-nav li a:active{
+        border: 0;
+        color: #e5c100;
+    }
+
+/*---About Me: Img---*/
+    .vi-img {
+        height: 90px;
+        border: 5px solid #ecebe8;
+        margin: 0 auto 10px auto;
+    }
+
+    
+/*---Timeline---*/
+    
+    .left-timeline { border-right: 0; }
+
+    .right-timeline { border-left: 0; }
+
+    .timeline-space { height: 0px; }
+
+    .time-left,
+    .time-right {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 1%;
+        z-index: 1;
+    }
+    
+}

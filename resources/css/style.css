@@ -1,0 +1,677 @@
+/* -------------------------------------------------*/
+/*BASIC SETUP*/
+/* -------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: #2a2d36;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix{zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* -------------------------------------------------*/
+/*REUSABLE COMPONENETS*/
+/* -------------------------------------------------*/
+
+a[name] {
+  padding-top: 60px;
+  margin-top: -60px;
+  display: inline-block; /* required for webkit browsers */
+    vertical-align: top;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.long-text {
+    word-spacing: 2px;
+    text-align: justify;
+    line-height: 160%;
+}
+
+p {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+/* -------------------------------------------------*/
+/*HEADINGS*/
+/* -------------------------------------------------*/
+
+h1 {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;  
+    font-size: 350%;
+    font-weight: 300;
+    color: #ecebe8; 
+    text-shadow: 0px 4px 3px rgba(0,0,0, 0.4),
+            0px 8px 13px rgba(0,0,0, 0.1),
+            0px 18px 23px rgba(0,0,0, 0.1);
+}
+
+h2{
+    font-family: 'Roboto', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 270%;
+    font-weight: light;
+    color: #ecebe8; 
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+/* -------------------------------------------------*/
+/*NAVIGATION*/
+/* -------------------------------------------------*/
+
+.logo {
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 50px;
+}
+
+.navigation i {
+    color: #ecebe8;
+    font-size: 200%;
+}
+
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.main-nav {
+    height: 60px;
+}
+
+.main-nav li {
+    margin: 10px 40px 10px 0px;
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 150%;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    color: #ecebe8;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    text-decoration: none;
+    color: #ecebe8;
+    border-bottom: 2px solid #e5c100;
+    transition: border 0.3s;
+}
+
+/*-----------Sticky Nav-----------------------------*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: #2a2d36;
+    -webkit-box-shadow: 0 2px 2px #25272e;
+    box-shadow: 0 2px 2px #25272e;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #ecebe8;
+}
+
+/*--------Mobile Navigation-----------------------*/
+
+.mobile-nav-icon {
+    float:right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #ecebe8;
+}
+
+
+/* -------------------------------------------------*/
+/*HEADER*/
+/* -------------------------------------------------*/
+
+header {
+    height: 100vh;
+    background-image: url(/vendors/css/img/shattered-island.gif);
+    background-position: center; 
+    background-repeat: repeat;
+}
+
+/* ---------HERO TEXT-------*/
+
+.hero-text-box {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+/* ---------LINKS----------*/
+
+.social-icons {
+    display: inline-block;
+}
+
+.social-icons li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px 20px;
+    font-size: 300%;
+    text-shadow: 0px 4px 3px rgba(0,0,0, 0.4),
+            0px 8px 13px rgba(0,0,0, 0.1),
+            0px 18px 23px rgba(0,0,0, 0.1);
+}
+
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    color: #ecebe8;
+}
+
+.social-icons li a:hover,
+.social-icons li a:active {
+    text-decoration: none;
+    color: #e5c100;
+    transform: scale(1.15);
+    transition: color 0.3s, font-size 0.5s;
+}
+
+/* ---------KNOW MORE----------*/
+.know-more {    
+    font-size: 300%;
+    position: absolute;
+    top:85%;
+    left: 49%;
+}
+
+.know-more a {
+    text-decoration: none;  
+}
+
+.know-more a:link,
+.know-more a:visited { 
+    color: #e5c100; 
+}
+
+.know-more a:hover,
+.know-more a:active { 
+    color: #ecebe8;
+}
+
+/* -------------------------------------------------*/
+/*SECTIONS*/
+/* -------------------------------------------------*/
+
+section {
+    padding-top: 60px;
+    color: #ecebe8;
+}
+
+/* -------------------------------------------------*/
+/*ABOUT*/
+/* -------------------------------------------------*/
+
+.vi-img {
+    height: 170px;
+    width: auto;
+    border: 5px solid #ecebe8;
+    margin: 0 auto 30px auto;
+    transform: rotate(351deg);
+}
+
+.long-text {
+    padding: 1% 4% 3% 4%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.know-more input {
+/*    display: none;*/
+}
+
+/* -------------------------------------------------*/
+/*TIMELINE*/
+/* -------------------------------------------------*/
+
+.left-timeline {
+    border-right: 5px solid #ecebe8;
+}
+
+.timeline-row {
+    position: relative;
+}
+
+.right-timeline {
+    border-left: 5px solid #ecebe8;
+}
+
+.timeline-space {
+    height: 100px;
+}
+
+.timeline h4 {    
+    text-align: center;
+    text-transform: uppercase;
+    color: #ecebe8;
+    font-size: 127%;
+}
+
+.timeline p {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    padding: 0 30px 30px 30px;
+    color: #ecebe8;
+    text-align: center;    
+}
+
+.time-left,
+.time-right {
+    position: absolute;    
+    top: 50%;
+    padding: 1%;
+    font-family: 'Roboto', serif;
+    text-transform: uppercase;
+    background-color: #e5c100;
+    color: #000;
+    z-index: 1;
+}
+
+.time-left {
+    right: -5%;
+}
+
+.time-right {
+    left: -5%;
+}
+
+.yellow {
+    color: #e5c100;
+}
+
+.exp-icon {    
+    height: 30px;
+    color: #ecebe8;
+    display: block;
+    margin: 20px auto;
+}
+
+.exp a{
+    color: #e5c100;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+.edu-icon {
+    font-size: 300%;
+    display: block; 
+    padding-top: 4%;
+    text-align: center;
+    color: #ecebe8;
+}
+
+/* -------------------------------------------------*/
+/*EXPERIENCE*/
+/* -------------------------------------------------*/
+
+/*-----------POPUP BOXES---------------------------*/
+
+.black_overlay {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 70%;
+    padding: 16px;
+    border: 2px solid black;
+    background-color: #fff;
+    border: 5px solid #30333C;
+    z-index: 1002;
+    overflow: auto;
+    text-align: center;  
+    min-width: 230px;
+    min-height: 230px;
+    color: #000;
+}
+
+.white_content img{
+    height: 60px;
+    color: #000000;
+    display: block;
+    margin: 20px auto 40px auto;
+}
+
+.white_content ul{
+    text-align: justify;
+    display: block;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.white_content li:last-child {
+    list-style: none;
+    font-style: italic;
+}
+
+.white_content a{
+    display: block;
+    text-align: center;
+    padding: 0 50;
+    margin: auto;
+}
+
+/* -------------------------------------------------*/
+/*PROJECTS*/
+/* -------------------------------------------------*/
+
+.section-projects {
+    background-color: #30333C;
+    padding-bottom: 3%;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    margin: 10px 10px;
+    padding: 0;
+    box-shadow: 2px 2px #262525;
+}
+
+.back {
+    background-color: #ecebe8;
+    padding: 5%;
+}
+
+#front1,
+#front2,
+#front3,
+#front4,
+#front5,
+#front6 {
+    background-position: center;
+    background-size: cover;
+}
+
+#front1 { background-image: url(/resources/img/non-profit.PNG); }
+
+#front2 { background-image: url(/resources/img/budget.PNG); }
+
+#front3 { background-image: url(/resources/img/omnifood.PNG); }
+
+#front4 { background-image: url(/resources/img/budget.PNG); }
+
+#front5 { background-image: url(/resources/img/pig-dice-game.PNG); }
+
+#front6 { background-image: url(/resources/img/non-profit.PNG); }
+
+.card h4 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #e5c100;
+}
+
+.card p {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    padding: 10px;
+    color: #ecebe8;
+    text-align: justify;
+}
+
+.back p{
+    color: #000;
+}
+
+.proj-link {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+    text-align: center;
+    font-size: 200%;
+    color: #e5c100;
+    padding-top: 0px;
+}
+
+.proj-link a {
+    margin-right: 10px;
+}
+
+.proj-link a:link,
+.proj-link a:visited {
+    text-decoration: none;
+    color: #e5c100;
+}
+
+.proj-link a:hover,
+.proj-link a:active {
+    text-decoration: none;
+    color: #ecebe8;
+    transition: color 0.2s;
+}
+
+.ion-settings {
+    color: #e5c100;
+}
+
+.ion-ios-redo {
+    color: #e5c100;
+    font-size: 200%;
+    display: block;
+    text-align: center;
+}
+
+
+
+/*
+
+.project {
+    padding-top: 20px;
+}
+
+.project h4 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ecebe8;
+}
+
+.project p {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    padding: 0 30px 0px 30px;
+    color: #ecebe8;
+    text-align: justify;
+}
+
+.ion-settings {
+    color: #e5c100;
+}
+
+.icon-big {
+    display: block;
+    font-size: 250%;
+    text-align: center;
+    color: #ecebe8;
+}
+
+.proj-link {
+    text-align: center;
+    font-size: 150%;
+    color: #e5c100;
+    padding-top: 0px;
+}
+
+.proj-link a {
+    margin-right: 10px;
+}
+
+.proj-link a:link,
+.proj-link a:visited {
+    text-decoration: none;
+    color: #e5c100;
+}
+
+.proj-link a:hover,
+.proj-link a:active {
+    text-decoration: none;
+    color: #ecebe8;
+    transition: color 0.2s;
+}
+*/
+
+/*
+------------CAROUSEL______________________________
+
+.slide {
+    height: 60vh;
+}
+*/
+
+/* -------------------------------------------------*/
+/*SKILLS*/
+/* -------------------------------------------------*/
+
+.section-skills {
+    color: #ecebe8;
+}
+
+.section-skills img {
+    height: 40px;
+}
+
+.section-skills figure{
+    text-align: center;
+    margin: 0% 5% 25% 5%;
+    margin-bottom: 25%;
+}
+
+@media (max-width: 767px) {
+    .section-skills img {
+        height: 20px;
+    }
+}
+
+/* -------------------------------------------------*/
+/*CERTIFICATIONS*/
+/* -------------------------------------------------*/
+
+.section-certifications {
+    height: 100vh;
+    position: relative;
+}
+
+.cert-display {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+/*
+    background-color: rgba(236, 235, 232, 0.67);
+    border: 5px solid #ecebe8;
+*/
+    padding: 40px 25px;
+}
+
+.cert-icon {
+    font-size: 400%;
+    text-align: center;
+    color: #ecebe8;
+}
+
+/* -------------------------------------------------*/
+/*FOOTER*/
+/* -------------------------------------------------*/
+
+footer {
+    position: relative;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 15px 0 10px 0;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-social {
+    float: right;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 170%;
+    text-align: right;
+}
+
+.footer-social li:last-child {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.footer-social li a:link,
+.footer-social li a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-social li a:hover,
+.footer-social li a:active {
+    text-decoration: none;
+    color: #e5c100;
+    transition: color 0.2s;
+}
+
+.copyright {
+    padding-top: 5px;
+}
